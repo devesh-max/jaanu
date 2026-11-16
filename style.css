@@ -11,7 +11,6 @@ h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;text-align:center;
 .keypad{max-width:330px;margin:22px auto 0;background:#f7a8bd;border-radius:25px;padding:20px}.display{background:#fff8fa;border-radius:14px;text-align:center;padding:12px;font-size:1.3rem;letter-spacing:9px;margin-bottom:14px;min-height:48px}.keys{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.keys button,.answer{border:0;border-radius:30px;padding:12px;background:#fff7f8;color:#c45d7b;font-weight:900;font-size:1rem;cursor:pointer}
 .progress{height:9px;background:#ffe4ec;border-radius:20px;overflow:hidden;margin:16px 0}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#f5a6bb,#c94f79);transition:.3s}
 .reveal{display:none;background:#fff0f5;border:1px dashed var(--pink);border-radius:18px;padding:18px;margin:18px auto;text-align:center}.reveal.show{display:block;animation:pop .35s ease}.scratch{background:linear-gradient(110deg,#f6b2c5,#e88eaa);color:white;border-radius:18px;padding:24px;cursor:pointer;user-select:none}.scratch.open{background:#fff0f5;color:var(--deep)}
-.timeline{border-left:3px dashed #ed9ab2;margin:25px auto;max-width:700px;padding-left:22px}.event{position:relative;background:white;padding:15px 18px;border-radius:15px;margin:16px 0;box-shadow:0 5px 15px #70425312}.event:before{content:"💗";position:absolute;left:-34px;top:15px}.event h3{text-align:left;margin:0}.event p{text-align:left;margin-bottom:0}
 footer{text-align:center;color:#a77a88;font-size:.8rem;margin-top:30px}.upload{display:inline-block;background:#fff0f5;padding:12px;border-radius:12px}audio{width:min(100%,460px);display:block;margin:20px auto}
 .spark{position:fixed;pointer-events:none;z-index:10;animation:rise 2.5s ease-out forwards;font-size:20px}
 @keyframes float{50%{transform:translateY(-7px)}}@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}@keyframes rise{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
@@ -26,3 +25,9 @@ body{padding-bottom:112px}
 .quiz-question h3{text-align:left;font-size:1.2rem;margin:0 0 12px}.quiz-option{display:flex;align-items:center;gap:9px;padding:9px 11px;margin:6px 0;border-radius:12px;background:#fff7f9;cursor:pointer}.quiz-option:hover{background:#ffe9f0}.quiz-option input{accent-color:#c94f79}
 .quiz-submit{display:block;margin:22px auto}.quiz-result{display:none;text-align:center;background:#fff0f5;border:2px dashed #efa6bd;border-radius:20px;padding:20px;margin:20px 0}.quiz-result.show{display:block;animation:pop .3s ease}.score-big{font-family:'DM Serif Display',serif;font-size:3rem;color:#c94f79}.quiz-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
 @media(max-width:560px){.music-dock{gap:7px;padding:8px 10px}.music-meta{min-width:85px;font-size:.72rem}.music-meta small{font-size:.62rem}.music-note{display:none}.music-dock audio{height:34px}.nav{padding-bottom:4px}}
+
+/* Jaanu scrapbook photos */
+.scrapbook-gallery .photo { overflow: hidden; }
+.scrapbook-gallery .photo img { display: block; width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 14px; }
+.scrapbook-gallery .photo small { display: block; padding: 10px 4px 2px; }
+@media (max-width: 600px) { .scrapbook-gallery .photo img { height: 260px; } }

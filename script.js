@@ -53,8 +53,21 @@ document.addEventListener("DOMContentLoaded",()=>{
  if(audio){
   const savedTime=Number(sessionStorage.getItem("jaanuMusicTime")||0);
   const wanted=sessionStorage.getItem("jaanuMusicPlaying")==="yes";
-  const restoreMusic=()=>{if(savedTime>0&&savedTime<audio.duration)audio.currentTime=savedTime;if(wanted)audio.play().catch(()=>{})};
+  audio.preload="auto";
+  const restoreMusic=()=>{
+   if(savedTime>0&&Number.isFinite(audio.duration)&&savedTime<audio.duration)audio.currentTime=savedTime;
+   // Try to resume automatically. Browsers may block audible autoplay until the visitor interacts.
+   if(wanted)audio.play().catch(()=>{});
+  };
   if(audio.readyState>=1)restoreMusic();else audio.addEventListener("loadedmetadata",restoreMusic,{once:true});
+  const startMusicFromFirstInteraction=()=>{
+   if(audio.paused){
+    audio.play().then(()=>sessionStorage.setItem("jaanuMusicPlaying","yes")).catch(()=>{});
+   }
+  };
+  // No need to press the audio controls: the first tap, click, or key press anywhere starts the song.
+  document.addEventListener("pointerdown",startMusicFromFirstInteraction,{once:true,capture:true});
+  document.addEventListener("keydown",startMusicFromFirstInteraction,{once:true,capture:true});
   audio.addEventListener("timeupdate",()=>sessionStorage.setItem("jaanuMusicTime",String(audio.currentTime)));
   audio.addEventListener("play",()=>sessionStorage.setItem("jaanuMusicPlaying","yes"));
   audio.addEventListener("pause",()=>sessionStorage.setItem("jaanuMusicPlaying","no"));

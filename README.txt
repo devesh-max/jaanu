@@ -1,4 +1,4 @@
-JAANU — UPDATED WEBSITE WITH MUSIC + QUIZ ARCADE
+BESTIE — UPDATED WEBSITE WITH MUSIC + QUIZ ARCADE
 
 WHAT'S INCLUDED
 - Music player dock on every page, using music.mp3.
@@ -8,14 +8,13 @@ WHAT'S INCLUDED
   2. How Well Do You Know Me?
 - One mark per correct answer, 10 marks per quiz.
 - Best scores saved in the browser using localStorage; total scoreboard is out of 20.
-- Existing letters, scrapbook, surprise, reasons, timeline, wish list, secret note and finale remain.
+- Existing letters, scrapbook, surprise, reasons, wish list, secret note and finale remain. The Timeline page has been removed.
 
 UPLOAD TO GITHUB PAGES
 1. Extract this ZIP.
 2. Open the jaanu GitHub repository.
 3. Upload ALL files and folders from inside this ZIP to the repository root.
 4. Replace old files when GitHub asks. Make sure music.mp3, quiz-data.js, script.js and style.css are uploaded.
-5. The old music.html page can be deleted from GitHub if it remains there.
 6. Settings > Pages > Deploy from a branch > main > /(root) > Save.
 7. Wait for deployment, then open https://devesh-max.github.io/jaanu/
 
@@ -36,7 +35,7 @@ Each correct answer = 1 mark. The total best score across both quizzes is out of
 Scores are saved on the visitor's browser and do not sync between different devices.
 
 PHOTOS
-Add a folder named photos beside memories.html. Add jaanu-1.jpg through jaanu-8.jpg.
+The photos/ folder already contains the seven supplied photos as jaanu-1.png through jaanu-7.png. The scrapbook is wired to these exact paths.
 Only use photos both people are comfortable sharing.
 
 PASSWORD
